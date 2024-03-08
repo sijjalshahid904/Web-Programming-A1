@@ -1,0 +1,74 @@
+body {
+    font-family: 'Calibri', sans-serif;
+    background-color: beige;
+}
+.resume-box {
+    border: 2px solid rgb(0, 112, 192);
+    max-width: 800px;
+    height: 1050px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+header {
+    text-align: center;
+    line-height: 10%;
+    font-weight: bold;
+    margin-bottom: 5%;
+}
+
+header img {
+    width: 150px;
+}
+
+section {
+    margin-bottom: 20px;
+
+}
+p {
+    color: rgb(64,64,64);
+    line-height: 1;
+}
+
+.right p{
+    margin-left:5%;
+}
+.right ul{
+    margin-left:5%;
+}
+.right h2{
+    margin-left:5%;
+}
+.left p{
+    margin-right:5%;
+}
+.left ul{
+    margin-right:5%;
+}
+.left h2{
+    margin-right:5%;
+}
+ul {
+    color: rgb(64,64,64);
+}
+.left {
+    border-top: 1px solid rgb(0, 112, 192);
+    float: left;
+    width: calc(50% - 0.5px);
+    margin-bottom: 5%;
+}
+
+.right {
+    
+    float: right;
+    width: calc(50% - 0.5px);
+    border-top: 1px solid rgb(0, 112, 192);
+    border-left: 1px solid rgb(0, 112, 192);
+    margin-bottom: 5%;
+}
+
+h1, h2 {
+    color: rgb(0, 112, 192);
+}

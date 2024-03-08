@@ -1,0 +1,125 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: rgb(196, 196, 196);
+}
+
+.form-box {
+    border: 2px solid rgb(64, 64, 64);
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    color: rgb(64, 64, 64);
+    text-align: center;
+}
+
+h2 {
+
+    text-align: center;
+    color: white;
+    margin-top: 20px;
+    background-color: #007bff;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+form div {
+    color: rgb(64, 64, 64);
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="tel"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgb(64, 64, 64);
+    box-sizing: border-box;
+}
+
+input[type="file"] {
+    padding: 10px 0;
+}
+
+input[type="date"] {
+    color:rgb(64, 64, 64);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 20px auto;
+    display: block;
+}
+#applications-table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td {
+    border: 1px solid #dddddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #dddddd;
+}
+
+#applications-table-container {
+    margin: 20px;
+}
+
+#applications-heading {
+    text-align: left;
+    padding-left: 10px;
+    color: #007bff;
+    background-color: white;
+    padding: 10px;
+    z-index: 2; 
+}

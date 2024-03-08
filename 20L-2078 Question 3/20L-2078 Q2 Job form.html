@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Application Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-box">
+        <h1>Job Application Form</h1>
+        <form id="job-application-form" action="#" method="post">
+
+            <h2>Personal Information</h2>
+            <div>
+                <label for="first-name">First Name:</label>
+                <input type="text" id="first-name" name="first-name" required>
+            </div>
+            <div>
+                <label for="last-name">Last Name:</label>
+                <input type="text" id="last-name" name="last-name" required>
+            </div>
+            <div>
+                <label for="phone">Phone Number:</label>
+                <input type="tel" id="phone" name="phone" required>
+            </div>
+            <div>
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div>
+                <label for="street">Street Address:</label>
+                <input type="text" id="street" name="street" required>
+            </div>
+            <div>
+                <label for="city">City:</label>
+                <input type="text" id="city" name="city" required>
+            </div>
+            <div>
+                <label for="state">State:</label>
+                <input type="text" id="state" name="state" required>
+            </div>
+            <div>
+                <label for="zip">ZIP Code:</label>
+                <input type="text" id="zip" name="zip" required>
+            </div>
+
+            <h2>Resume and Cover Letter</h2>
+            <div>
+                <label for="resume">Upload Resume:</label>
+                <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required>
+            </div>
+            <div>
+                <label for="cover-letter">Cover Letter:</label>
+                <textarea id="cover-letter" name="cover-letter" rows="4" required></textarea>
+            </div>
+            <h2>Education</h2>
+            <div >
+                <label for="education-level">Highest Level of Education Attained:</label>
+                <input type="text" id="education-level" name="education-level" required>
+            </div>
+            <div>
+                <label for="school-university">Name of School/University:</label>
+                <input type="text" id="school-university" name="school-university" required>
+            </div>
+            <div>
+                <label for="major">Major/Area of Study:</label>
+                <input type="text" id="major" name="major" required>
+            </div> 
+            <div>
+                <label for="graduation-year">Graduation Year:</label>
+                <input type="text" id="graduation-year" name="graduation-year" required>
+            </div>
+            <h2>Employment History</h2>
+            <div class="form-group">
+                <label for="job-titles">Previous Job Title:</label>
+                <input type="text" id="job-title" name="job-title" required>
+            </div>
+            <div>
+                <label for="company-names">Company Name:</label>
+                <input type="text" id="company-name" name="company-name" required>
+            </div>
+            <div>
+                <label for="employment-date">Employment Date:</label>
+                <input type="text" id="employment-date" name="employment-date" required>
+            </div>
+            <div>
+                <label for="job-responsibilities">Job Responsibilities:</label>
+                <textarea id="job-responsibilities" name="job-responsibilities" rows="4" required></textarea>
+            </div>
+
+            <h2>Skills</h2>
+            <div>
+                <label for="relevant-skills">Relevant Skills:</label>
+                <input type="text" id="relevant-skills" name="relevant-skills" required>
+            </div>
+            <div>
+                <label for="certifications">Certifications:</label>
+                <input type="text" id="certifications" name="certifications">
+            </div>
+            
+            <h2>Availability</h2>
+            <div>
+                <label for="start-date">Start Date:</label>
+                <input type="date" id="start-date" name="start-date" required>
+            </div>
+            <div>
+                <label for="preferred-schedule">Preferred Work Schedule:</label>
+                <input type="text" id="preferred-schedule" name="preferred-schedule">
+            </div>
+            <div>
+                <label for="relocate">Willingness to Relocate:</label>
+                <select id="relocate" name="relocate" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+
+            <h2>References</h2>
+            <div>
+                <label for="reference-name">Reference Name:</label>
+                <input type="text" id="reference-name" name="reference-name" required>
+            </div>
+            <div>
+                <label for="reference-contact">Reference Contact Information:</label>
+                <input type="text" id="reference-contact" name="reference-contact" required>
+            </div>
+            <div>
+                <label for="relationship">Relationship to Applicant:</label>
+                <input type="text" id="relationship" name="relationship" required>
+            </div>
+
+            <h2>Additional Questions</h2>
+            <div>
+                <label for="why-work">Why do you want to work for this company?</label>
+                <textarea id="why-work" name="why-work" rows="4" cols="50" required></textarea>
+            </div>
+
+            <h2>Consent and Agreement</h2>
+            <div>
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">I agree to the terms and conditions</label>
+            </div>
+            <div>
+                <input type="checkbox" id="privacy-policy" name="privacy-policy" required>
+                <label for="privacy-policy">I acknowledge the privacy policy</label>
+            </div>
+            <div id="error-message" style="color: red; margin-bottom: 10px; display: none;">
+                Please resolve errors before submitting.
+            </div>
+            <div>
+                <input type="submit" value="Submit Application">
+            </div>
+        </form>
+    </div>
+    <button id="view-applications-btn">View Applications as Table</button>
+
+    <div id="applications-table-container" style="display: none;">
+        <h2 id="applications-heading">Applications</h2>
+        <table id="applications-table" border="1">
+            <thead>
+                <tr>
+                    <!-- Personal Information -->
+                    <th>First Name</th>
+                    <th>Second Name</th>
+                    <th>Phone Number</th>
+                    <th>Email Address</th>
+                    <th>Street Address</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zip Code</th>
+                    <!-- Resume and Cover Letter -->
+                    <th>Upload Resume</th>
+                    <th>Cover Letter</th>
+                    <!-- Education -->
+                    <th>Highest Education Level</th>
+                    <th>School/University</th>
+                    <th>Major/Area of Study</th>
+                    <th>Graduation Year</th>
+                    <!-- Employment History -->
+                    <th>Previous Job Titles</th>
+                    <th>Company Names</th>
+                    <th>Employment Dates</th>
+                    <th>Job Responsibilities</th>
+                    <!-- Skills -->
+                    <th>Relevant Skills</th>
+                    <th>Certifications</th>
+                    <!-- Availability -->
+                    <th>Start Date</th>
+                    <th>Preferred Work Schedule</th>
+                    <th>Willingness to Relocate</th>
+                    <!-- References -->
+                    <th>Reference Name</th>
+                    <th>Reference Contact Information</th>
+                    <th>Relationship to Applicant</th>
+                    <!-- Additional Questions -->
+                    <th>Why do you want to work for this company?</th>
+                    <!-- Consent and Agreement -->
+                    <th>Terms and Conditions Agreement</th>
+                    <th>Privacy Policy Acknowledgment</th>
+                </tr>
+            </thead>
+            <tbody id="applications-table-body">
+                <!-- Table body will be populated dynamically -->
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        var applications = [];
+        document.getElementById('job-application-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+
+            var isValid = true;
+            var errorMessageDiv = document.getElementById('error-message');
+            errorMessageDiv.style.display = 'none';
+            var phoneInput = document.getElementById('phone');
+            var phoneValue = phoneInput.value.trim();
+            var phonePattern = /^(?:\+92\d{10}|\d{11})$/;
+            if (!phonePattern.test(phoneValue)) {
+                displayError(phoneInput, 'Invalid phone number format (either 11 digits or +92 followed by 10 digits)');
+                isValid = false;
+            } else {
+                removeError(phoneInput);
+            }
+
+            var emailInput = document.getElementById('email');
+            var emailValue = emailInput.value.trim();
+            var emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailPattern.test(emailValue)) {
+                displayError(emailInput, 'Invalid email format');
+                isValid = false;
+            } else {
+                removeError(emailInput);
+            }
+
+
+            var resumeFileInput = document.getElementById('resume');
+            var resumeFile = resumeFileInput.files[0];
+            var allowedFileTypes = ['application/pdf', 'application/msword', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'];
+            var maxFileSize = 5 * 1024 * 1024; // 5 MB
+            if (!resumeFile || !allowedFileTypes.includes(resumeFile.type) || resumeFile.size > maxFileSize) {
+                displayError(resumeFileInput, 'Invalid file format or size (allowed types: PDF, DOC, DOCX, max size: 5MB)');
+                isValid = false;
+            } else {
+                removeError(resumeFileInput);
+            }
+
+            var coverLetterInput = document.getElementById('cover-letter');
+            var coverLetterText = coverLetterInput.value.trim();
+            var maxCharacters = 1000;
+            if (coverLetterText.length > maxCharacters) {
+                displayError(coverLetterInput, 'Cover letter exceeds maximum character limit (1000 characters)');
+                isValid = false;
+            } else {
+                removeError(coverLetterInput);
+            }
+
+            var graduationYearInput = document.getElementById('graduation-year');
+            var graduationYearValue = graduationYearInput.value.trim();
+            if (!graduationYearValue || !/^\d{4}$/.test(graduationYearValue)) {
+                displayError(graduationYearInput, 'Invalid graduation year format (should be a 4-digit number)');
+                isValid = false;
+            } else {
+                var currentYear = new Date().getFullYear();
+                if (parseInt(graduationYearValue) > currentYear || parseInt(graduationYearValue) < currentYear - 100) {
+                    displayError(graduationYearInput, 'Invalid graduation year (should be between ' + (currentYear - 100) + ' and ' + currentYear + ')');
+                    isValid = false;
+                } else {
+                    removeError(graduationYearInput);
+                }
+            }
+
+            var startDateInput = document.getElementById('start-date');
+            var startDateValue = new Date(startDateInput.value);
+            var currentDate = new Date();
+            if (startDateValue < currentDate) {
+                displayError(startDateInput, 'Start date cannot be in the past');
+                isValid = false;
+            } else {
+                removeError(startDateInput);
+            }
+ 
+            if (isValid) {
+            var formData = new FormData(this); // Capture form data
+            var applicationData = {}; // Object to store application data
+
+            // Iterate through form data and store in applicationData object
+            formData.forEach(function(value, key) {
+                applicationData[key] = value;
+            });
+
+            applications.push(applicationData); // Store application data
+
+            // Log the data to console
+            console.log('Application submitted:', applicationData);
+
+            // Clear the form for the next submission
+            this.reset();
+        } else {
+            errorMessageDiv.style.display = 'block';
+        }
+    });
+    
+    function displayApplicationsTable() {
+        // Hide form and display applications table
+        document.querySelector('.form-box').style.display = 'none';
+        document.getElementById('view-applications-btn').style.display = 'none';
+
+        // Display applications table
+        document.getElementById('applications-table-container').style.display = 'block';
+
+        // Get the table body element
+        var tableBody = document.getElementById('applications-table-body');
+
+        // Append new rows for each submitted application
+        applications.forEach(function(application) {
+            var row = document.createElement('tr');
+
+            // Add cells to the row for each field in the application
+            Object.values(application).forEach(function(value) {
+                var cell = document.createElement('td');
+                cell.textContent = value;
+                row.appendChild(cell);
+            });
+
+            // Append row to table body
+            tableBody.appendChild(row);
+        });
+    }
+
+    // Event listener for "View Applications as Table" button
+    document.getElementById('view-applications-btn').addEventListener('click', displayApplicationsTable);
+
+        function displayError(inputElement, errorMessage) {
+            var errorElement = document.createElement('div');
+            errorElement.classList.add('error-message');
+            errorElement.textContent = errorMessage;
+            errorElement.style.color = 'red';
+            // Remove any existing error message
+            removeError(inputElement);
+
+            // Add the new error message
+            var parentElement = inputElement.parentElement;
+            parentElement.appendChild(errorElement);
+        }
+
+        function removeError(inputElement) {
+            var parentElement = inputElement.parentElement;
+            var errorElement = parentElement.querySelector('.error-message');
+            if (errorElement) {
+                parentElement.removeChild(errorElement);
+            }
+        }
+    </script>
+</body>
+</html>
