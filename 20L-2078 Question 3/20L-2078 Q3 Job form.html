@@ -201,7 +201,7 @@
                 </tr>
             </thead>
             <tbody id="applications-table-body">
-                <!-- Table body will be populated dynamically -->
+
             </tbody>
         </table>
     </div>
@@ -282,20 +282,18 @@
             }
  
             if (isValid) {
-            var formData = new FormData(this); // Capture form data
-            var applicationData = {}; // Object to store application data
+            var formData = new FormData(this);
+            var applicationData = {};
 
-            // Iterate through form data and store in applicationData object
+
             formData.forEach(function(value, key) {
                 applicationData[key] = value;
             });
 
-            applications.push(applicationData); // Store application data
+            applications.push(applicationData);
 
-            // Log the data to console
             console.log('Application submitted:', applicationData);
 
-            // Clear the form for the next submission
             this.reset();
         } else {
             errorMessageDiv.style.display = 'block';
@@ -303,33 +301,26 @@
     });
     
     function displayApplicationsTable() {
-        // Hide form and display applications table
         document.querySelector('.form-box').style.display = 'none';
         document.getElementById('view-applications-btn').style.display = 'none';
 
-        // Display applications table
         document.getElementById('applications-table-container').style.display = 'block';
 
-        // Get the table body element
         var tableBody = document.getElementById('applications-table-body');
 
-        // Append new rows for each submitted application
         applications.forEach(function(application) {
             var row = document.createElement('tr');
 
-            // Add cells to the row for each field in the application
             Object.values(application).forEach(function(value) {
                 var cell = document.createElement('td');
                 cell.textContent = value;
                 row.appendChild(cell);
             });
 
-            // Append row to table body
             tableBody.appendChild(row);
         });
     }
 
-    // Event listener for "View Applications as Table" button
     document.getElementById('view-applications-btn').addEventListener('click', displayApplicationsTable);
 
         function displayError(inputElement, errorMessage) {
@@ -337,10 +328,8 @@
             errorElement.classList.add('error-message');
             errorElement.textContent = errorMessage;
             errorElement.style.color = 'red';
-            // Remove any existing error message
             removeError(inputElement);
 
-            // Add the new error message
             var parentElement = inputElement.parentElement;
             parentElement.appendChild(errorElement);
         }
